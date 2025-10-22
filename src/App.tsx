@@ -164,15 +164,14 @@ function App() {
       {selectedPhoto && (
         <div className="fixed inset-0 bg-black/90 flex items-center justify-center p-3 z-50" onClick={() => setSelectedPhoto(null)}>
           <div className="bg-white rounded-xl p-4 w-full max-w-sm" onClick={(e) => e.stopPropagation()}>
-            <div className="flex justify-between items-center mb-3">
-              <h3 className="text-lg sm:text-xl font-bold text-rose-600">Momento Especial</h3>
-              <button onClick={() => setSelectedPhoto(null)} className="text-gray-500 hover:text-gray-700">
+            <div className="flex relative items-center mb-3">
+<h3 className="absolute left-1/2 -translate-x-1/2 text-lg sm:text-xl font-bold text-rose-600">♥♥</h3>              <button onClick={() => setSelectedPhoto(null)} className="text-gray-500 hover:text-gray-700">
                 <X className="w-5 h-5" />
               </button>
             </div>
             <img src={selectedPhoto.url} alt="" className="w-full max-h-[60vh] object-contain rounded-lg mb-3" />
             {selectedPhoto.message && (
-              <p className="text-center text-gray-700 text-sm sm:text-base italic">
+              <p className="text-center text-rose-600 text-sm sm:text-base italic">
                 {selectedPhoto.message}
               </p>
             )}
