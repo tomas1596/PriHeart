@@ -1,6 +1,28 @@
 import { useState } from 'react';
 import { X, Heart } from 'lucide-react';
 
+// Importar todas las fotos
+import foto1 from './images/foto1.jpg';
+import foto2 from './images/foto2.jpg';
+import foto3 from './images/foto3.jpg';
+import foto4 from './images/foto4.jpg';
+import foto5 from './images/foto5.jpg';
+import foto6 from './images/foto6.jpg';
+import foto7 from './images/foto7.jpg';
+import foto8 from './images/foto8.jpg';
+import foto9 from './images/foto9.jpg';
+import foto10 from './images/foto10.jpg';
+import foto11 from './images/foto11.jpg';
+import foto12 from './images/foto12.jpg';
+import foto13 from './images/foto13.jpg';
+import foto14 from './images/foto14.jpg';
+import foto15 from './images/foto15.jpg';
+import foto16 from './images/foto16.jpg';
+import foto17 from './images/foto17.jpg';
+import foto18 from './images/foto18.jpg';
+import foto19 from './images/foto19.jpg';
+import foto20 from './images/foto20.jpg';
+
 interface Photo {
   id: number;
   url: string;
@@ -10,27 +32,28 @@ interface Photo {
 function App() {
   const [selectedPhoto, setSelectedPhoto] = useState<Photo | null>(null);
 
+  // Ahora usamos las variables importadas
   const photos: Photo[] = [
-    { id: 0, url: '/src/images/foto1.jpg', message: 'Te miro y entiendo todo' },
-    { id: 1, url: '/src/images/foto2.jpg', message: 'Mi lugar favorito' },
-    { id: 2, url: '/src/images/foto3.jpg', message: 'Y pensar que todo comenzó en un tik tok' },
-    { id: 3, url: '/src/images/foto4.jpg', message: 'Tus besos son el calor que mi alma necesita' },
-    { id: 4, url: '/src/images/foto5.jpg', message: 'Cada recuerdo con vos vale oro' },
-    { id: 5, url: '/src/images/foto6.jpg', message: 'Sos mi historia favorita' },
-    { id: 6, url: '/src/images/foto7.jpg', message: 'Sos mi persona favorita' },
-    { id: 7, url: '/src/images/foto8.jpg', message: 'Prometo cuidarte siempre' },
-    { id: 8, url: '/src/images/foto9.jpg', message: 'En ese abrazo, te encontré' },
-    { id: 9, url: '/src/images/foto10.jpg', message: 'En estos besos, me encontré' },
-    { id: 10, url: '/src/images/foto11.jpg', message: 'Haces que lo simple, lo sea todo' },
-    { id: 11, url: '/src/images/foto12.jpg', message: 'No me dejes de abrazar así nunca' },
-    { id: 12, url: '/src/images/foto13.jpg', message: 'Con vos, si a todo' },
-    { id: 13, url: '/src/images/foto14.jpg', message: 'De esos días que no quiero que se terminen' },
-    { id: 14, url: '/src/images/foto15.jpg', message: 'De esas miradas, que quiero que duren para siempre' },
-    { id: 15, url: '/src/images/foto16.jpg', message: 'De esas caricias, que calman mi corazón' },
-    { id: 16, url: '/src/images/foto17.jpg', message: 'Ninguna flor se compara con lo que florecés en mi vida' },
-    { id: 17, url: '/src/images/foto18.jpg', message: 'Nos caemos y nos levantamos, porque esto es amor real' },
-    { id: 18, url: '/src/images/foto19.jpg', message: 'Gracias por ser vos' },
-    { id: 19, url: '/src/images/foto20.jpg', message: 'Nosotros siendo nosotros' },
+    { id: 0, url: foto1, message: 'Te miro y entiendo todo' },
+    { id: 1, url: foto2, message: 'Mi lugar favorito' },
+    { id: 2, url: foto3, message: 'Y pensar que todo comenzó en un tik tok' },
+    { id: 3, url: foto4, message: 'Tus besos son el calor que mi alma necesita' },
+    { id: 4, url: foto5, message: 'Cada recuerdo con vos vale oro' },
+    { id: 5, url: foto6, message: 'Sos mi historia favorita' },
+    { id: 6, url: foto7, message: 'Sos mi persona favorita' },
+    { id: 7, url: foto8, message: 'Prometo cuidarte siempre' },
+    { id: 8, url: foto9, message: 'En ese abrazo, te encontré' },
+    { id: 9, url: foto10, message: 'En estos besos, me encontré' },
+    { id: 10, url: foto11, message: 'Haces que lo simple, lo sea todo' },
+    { id: 11, url: foto12, message: 'No me dejes de abrazar así nunca' },
+    { id: 12, url: foto13, message: 'Con vos, si a todo' },
+    { id: 13, url: foto14, message: 'De esos días que no quiero que se terminen' },
+    { id: 14, url: foto15, message: 'De esas miradas, que quiero que duren para siempre' },
+    { id: 15, url: foto16, message: 'De esas caricias, que calman mi corazón' },
+    { id: 16, url: foto17, message: 'Ninguna flor se compara con lo que florecés en mi vida' },
+    { id: 17, url: foto18, message: 'Nos caemos y nos levantamos, porque esto es amor real' },
+    { id: 18, url: foto19, message: 'Gracias por ser vos' },
+    { id: 19, url: foto20, message: 'Nosotros siendo nosotros' },
   ];
 
   const getPhoto = (index: number) => photos.find(p => p.id === index);
